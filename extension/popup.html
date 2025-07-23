@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bino Emergency</title>
+  <style>
+    body {
+      width: 300px;
+      padding: 15px;
+      font-family: Arial, sans-serif;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .contact-input {
+      display: flex;
+      gap: 5px;
+      margin-bottom: 10px;
+    }
+    input[type="text"] {
+      flex: 1;
+      padding: 8px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+    button {
+      background-color: #e74c3c;
+      color: white;
+      border: none;
+      padding: 8px 15px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    button:hover {
+      background-color: #c0392b;
+    }
+    .secondary-btn {
+      background-color: #3498db;
+    }
+    .secondary-btn:hover {
+      background-color: #2980b9;
+    }
+    .contact-list {
+      margin-top: 10px;
+      max-height: 200px;
+      overflow-y: auto;
+      border: 1px solid #eee;
+      border-radius: 4px;
+      padding: 5px;
+    }
+    .contact-item {
+      display: flex;
+      justify-content: space-between;
+      padding: 5px;
+      border-bottom: 1px solid #f0f0f0;
+    }
+    .remove-btn {
+      color: #e74c3c;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0 5px;
+    }
+    .tab-buttons {
+      display: flex;
+      margin-bottom: 10px;
+      border-bottom: 1px solid #ddd;
+    }
+    .tab-btn {
+      flex: 1;
+      padding: 8px;
+      background: none;
+      border: none;
+      border-bottom: 2px solid transparent;
+      cursor: pointer;
+    }
+    .tab-btn.active {
+      border-bottom: 2px solid #e74c3c;
+      font-weight: bold;
+    }
+    .tab-content {
+      display: none;
+    }
+    .tab-content.active {
+      display: block;
+    }
+    #status {
+      margin-top: 10px;
+      padding: 5px;
+      border-radius: 4px;
+      text-align: center;
+    }
+    .success {
+      background-color: #d4edda;
+      color: #155724;
+    }
+    .error {
+      background-color: #f8d7da;
+      color: #721c24;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Bino Emergency</h2>
+    
+    <div class="tab-buttons">
+      <button class="tab-btn active" data-tab="contacts">Contacts</button>
+      <button class="tab-btn" data-tab="emergency">Emergency</button>
+    </div>
+    
+    <div id="contacts-tab" class="tab-content active">
+      <div class="contact-input">
+        <input type="text" id="contactName" placeholder="Contact name">
+        <input type="text" id="contactNumber" placeholder="Phone number with country code">
+        <button id="addContact">Add</button>
+      </div>
+      
+      <div class="contact-list" id="contactsList">
+        <!-- Contacts will be listed here -->
+      </div>
+    </div>
+    
+    <div id="emergency-tab" class="tab-content">
+      <p>Click the button below to send emergency alerts to all contacts.</p>
+      <button id="emergencyBtn" class="secondary-btn">SEND EMERGENCY ALERT</button>
+      <div id="status"></div>
+    </div>
+  </div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>

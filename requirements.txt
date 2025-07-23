@@ -1,0 +1,9 @@
+SpeechRecognition>=3.10.0
+PyAudio>=0.2.13
+geocoder>=1.38.1
+python-whatsapp>=0.1.9
+python-dotenv>=1.0.0
+colorama>=0.4.6
+requests>=2.28.0
+flask>=2.0.0
+pyngrok>=5.0.0

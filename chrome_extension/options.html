@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bino Emergency - Settings</title>
+  <style>
+    body {
+      width: 400px;
+      padding: 20px;
+      font-family: Arial, sans-serif;
+    }
+    .container {
+      margin-bottom: 20px;
+    }
+    input[type="text"] {
+      width: 70%;
+      padding: 8px;
+      margin-right: 5px;
+    }
+    button {
+      padding: 8px 15px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+    #contactsList {
+      margin-top: 15px;
+      border-top: 1px solid #ddd;
+      padding-top: 10px;
+    }
+    .contact-item {
+      display: flex;
+      justify-content: space-between;
+      padding: 8px;
+      border-bottom: 1px solid #eee;
+    }
+    .remove-btn {
+      background-color: #f44336;
+    }
+    .remove-btn:hover {
+      background-color: #d32f2f;
+    }
+  </style>
+</head>
+<body>
+  <h2>Trusted Contacts</h2>
+  <div class="container">
+    <p>Add phone numbers of trusted contacts (with country code, e.g., +1234567890):</p>
+    <input type="text" id="phoneNumber" placeholder="+1234567890">
+    <button id="addContact">Add Contact</button>
+  </div>
+  
+  <div id="contactsList">
+    <h3>Your Trusted Contacts</h3>
+    <div id="contacts">
+      <!-- Contacts will be listed here -->
+    </div>
+  </div>
+  
+  <script src="options.js"></script>
+</body>
+</html>
